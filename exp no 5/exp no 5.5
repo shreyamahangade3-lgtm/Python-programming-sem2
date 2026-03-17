@@ -1,0 +1,13 @@
+# find student present in both classes
+"""
+Created on Tue Mar 17 11:13:22 2026
+
+@author: shreya
+"""
+
+class1 = set(map(int, input("Enter roll numbers of class 1: ").split()))
+class2 = set(map(int, input("Enter roll numbers of class 2: ").split()))
+
+common_students = class1 & class2
+
+print("Students present in both classes:", common_students)
