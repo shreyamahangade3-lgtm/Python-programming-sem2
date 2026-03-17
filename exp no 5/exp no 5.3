@@ -1,0 +1,18 @@
+# update book price
+"""
+Created on Tue Mar 17 11:06:04 2026
+
+@author: shreya
+"""
+
+books = {"Math": 250, "Science": 300, "English": 200}
+
+book_name = input("Enter book name: ")
+new_price = int(input("Enter new price: "))
+
+if book_name in books:
+    books[book_name] = new_price
+else:
+    print("Book not found!")
+
+print("Updated dictionary:", books)
