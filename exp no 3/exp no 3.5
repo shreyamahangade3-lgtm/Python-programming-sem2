@@ -1,0 +1,14 @@
+# recursive function for stairs count
+"""
+Created on Fri Mar 20 10:54:11 2026
+
+@author: shreya
+"""
+
+def total_stairs(n):
+    if n == 1:
+        return 1
+    return n + total_stairs(n - 1)
+
+# Example
+print("Total stairs count:", total_stairs(5))
