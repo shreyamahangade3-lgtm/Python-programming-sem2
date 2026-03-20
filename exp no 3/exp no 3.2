@@ -1,0 +1,18 @@
+#  to compute simple interest using a function with parameter
+
+"""
+Created on Fri Mar 20 10:46:33 2026
+
+@author: shreya
+"""
+
+def simple_interest(principal, rate, time):
+    si = (principal * rate * time) / 100
+    return si
+# Taking input from the user
+p = float(input("Enter principal amount: "))
+r = float(input("Enter rate of interest: "))
+t = float(input("Enter time (in years): "))
+# Function call
+interest = simple_interest(p, r, t)
+print("Simple Interest is:", interest)
