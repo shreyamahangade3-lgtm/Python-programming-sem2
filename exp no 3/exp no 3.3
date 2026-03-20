@@ -1,0 +1,16 @@
+# function to calculate emi
+"""
+Created on Fri Mar 20 10:50:41 2026
+
+@author: shreya
+"""
+
+def calculate_emi(P, annual_rate, years):
+    r = annual_rate / (12 * 100)   # monthly interest rate
+    n = years * 12                 # number of months
+
+    emi = (P * r * (1 + r)**n) / ((1 + r)**n - 1)
+    return emi
+
+# Example
+print("EMI:", calculate_emi(100000, 10, 2))
