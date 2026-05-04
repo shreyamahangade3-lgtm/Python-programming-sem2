@@ -1,0 +1,26 @@
+# BMI health checker app
+"""
+Created on Mon May  4 15:43:51 2026
+
+@author: shreya
+"""
+
+import streamlit as st
+
+st.title("💪 BMI Health Checker")
+
+height = st.number_input("Enter height (in meters)", min_value=0.5)
+weight = st.number_input("Enter weight (in kg)", min_value=1.0)
+
+if st.button("Check BMI"):
+    bmi = weight / (height ** 2)
+    st.write(f"Your BMI is: {bmi:.2f}")
+    
+    if bmi < 18.5:
+        st.warning("Underweight")
+    elif 18.5 <= bmi < 25:
+        st.success("Normal weight")
+    elif 25 <= bmi < 30:
+        st.warning("Overweight")
+    else:
+        st.error("Obese")
